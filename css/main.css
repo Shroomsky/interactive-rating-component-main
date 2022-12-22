@@ -1,0 +1,158 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light_Grey: hsl(217, 12%, 63%);
+  --Medium_Grey: hsl(216, 12%, 54%);
+  --Dark_Blue: hsl(213, 19%, 18%);
+  --Less_Dark_Blue: hsl(213, 19%, 25%);
+  --Very_Dark_Blue: hsl(216, 12%, 8%);
+  --Orange: hsl(25, 97%, 53%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: var(--Very_Dark_Blue);
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  margin: 20vh auto;
+  max-width: 375px;
+}
+
+.card {
+  width: 350px;
+  min-height: 300px;
+  background-color: var(--Dark_Blue);
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  color: var(--Medium_Grey);
+}
+.card h1 {
+  color: var(--White);
+  padding: 10px 0px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.card p {
+  display: block;
+  height: 80px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.card form {
+  margin-top: 20px;
+}
+
+button.submit {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--Orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--White);
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+button.submit:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+.rates {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.cyrcle {
+  color: var(--Medium_Grey);
+  background-color: var(--Less_Dark_Blue);
+  width: 45px;
+  border-radius: 50%;
+  padding: 14px;
+  border: none;
+}
+
+button.cyrcle {
+  cursor: pointer;
+}
+button.cyrcle:focus {
+  color: var(--White);
+  background-color: var(--Light_Grey);
+}
+button.cyrcle:hover {
+  color: var(--White);
+  background-color: var(--Orange);
+}
+
+.thankYou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thankYou img {
+  width: 140px;
+  padding: 20px 0px;
+  margin-bottom: 15px;
+}
+.thankYou h3 {
+  background-color: var(--Less_Dark_Blue);
+  border: none;
+  border-radius: 15px;
+  padding: 7px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--Orange);
+}
+.thankYou h2 {
+  padding: 20px;
+  color: var(--White);
+}
+.thankYou p {
+  text-align: center;
+}
+
+.notActive {
+  display: none;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin-top: 10px;
+  padding: 20px;
+  color: #fff;
+  background-color: var(--Dark_Blue);
+}
+.footer .attribution {
+  text-align: center;
+}
+.footer .attribution a {
+  text-decoration: none;
+  color: var(--Medium_Grey);
+}
+.footer .attribution a:visited {
+  color: var(--Medium_Grey);
+}/*# sourceMappingURL=main.css.map */
