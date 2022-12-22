@@ -30,7 +30,7 @@ a {
 }
 .wrapper {
 	flex: 1 0 auto;
-	margin: 20vh auto;
+	margin: 15vh auto;
 	max-width: 375px;
 }
 
@@ -40,7 +40,7 @@ a {
 	background-color: var(--Dark_Blue);
 	border: none;
 	border-radius: 15px;
-	padding: 20px;
+	padding: 25px;
 	color: var(--Medium_Grey);
 
 	& h1 {
@@ -105,7 +105,7 @@ button.cyrcle {
 	flex-direction: column;
 	align-items: center;
 	& img {
-		width: 140px;
+		width: 120px;
 		padding: 20px 0px;
 		margin-bottom: 15px;
 	}
@@ -113,13 +113,13 @@ button.cyrcle {
 		background-color: var(--Less_Dark_Blue);
 		border: none;
 		border-radius: 15px;
-		padding: 7px 10px;
+		padding: 10px 10px;
 		font-size: 14px;
 		font-weight: 400;
 		color: var(--Orange);
 	}
 	& h2 {
-		padding: 20px;
+		padding: 15px;
 		color: var(--White);
 	}
 	& p {
