@@ -1,26 +1,32 @@
-const submitBtn = document.querySelector(".submit");
-const rating = document.querySelector(".rating");
-const thankYou = document.querySelector(".thankYou");
-const rates = document.querySelectorAll("button.cyrcle");
-const span = document.querySelector("h3 span");
+const span = document.querySelector("#display_rate");
+const thankYouCard = document.querySelector(".thankYou");
+const rates = document.querySelector(".rates");
+const headerP = document.querySelector("#p");
+let rate;
 
-const cardSwith = () => {
-	rating.classList.toggle("notActive");
-	thankYou.classList.toggle("notActive");
+const componentReset = () => {
+	thankYouCard.classList.add("notActive");
+	rates.classList.remove("notActive");
+    error.remove();
 };
 
-const rateListener = () => {
-	for (let f of rates) {
-		f.addEventListener("click", rateToSpan);
+let error = document.createElement("p");
+		error.classList.add("error");
+		error.innerHTML = "Please select rate before submit";
+
+const ratesCheck = (e) => {
+	e.preventDefault();
+	rate = document.querySelector('input[name="rate"]:checked');
+	if (rate !== null) {
+		span.innerHTML = rate.value;
+		thankYouCard.classList.remove("notActive");
+		rates.classList.add("notActive");
+		setTimeout(componentReset, 2000);
+	} else {
+		
+		headerP.append(error);
+		setTimeout(componentReset, 2000);
 	}
 };
-const rateToSpan = (e) => {
-	span.innerHTML = e.srcElement.innerHTML;
-};
-const submitFn = () => {
-	cardSwith();
-	setTimeout(cardSwith, 3000);
-};
 
-rateListener();
-submitBtn.addEventListener("click", submitFn);
+document.addEventListener("submit", ratesCheck);

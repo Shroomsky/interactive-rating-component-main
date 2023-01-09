@@ -23,35 +23,29 @@
   <main class="wrapper">
     <div class="card ">
       <!-- Rating state start -->
-      <div class="rating">
-        <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="cyrcle">
-        <h1>How did we do?</h1>
-        <p>Please let us know how we did with your support request. All feedback is appreciated
-          to help us improve our offering!</p>
-        <div class="rates">
-          <button class="cyrcle">1</button>
-          <button class="cyrcle">2</button>
-          <button class="cyrcle">3</button>
-          <button class="cyrcle">4</button>
-          <button class="cyrcle">5</button>
-        </div>
-        <button class="submit">
-          Submit
-        </button>
+      <div class="rates">
+        <header>
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="cyrcle">
+          <h1>How did we do?</h1>
+          <p id="p">Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!</p>
+        </header>
+        <form>
+          <input type="radio" id="1" value="1" name="rate"><label for="1">1</label>
+          <input type="radio" id="2" value="2" name="rate"><label for="2">2</label>
+          <input type="radio" id="3" value="3" name="rate"><label for="3">3</label>
+          <input type="radio" id="4" value="4" name="rate"><label for="4">4</label>
+          <input type="radio" id="5" value="5" name="rate"><label for="5">5</label>
+          <input type="submit" value="Submit" class="submit">
+        </form>
       </div>
-      <!-- Rating state end -->
-      <!-- Thank you state start -->
       <div class="thankYou notActive">
-        <img src="./images/illustration-thank-you.svg" alt="">
-        <h3>You selected <span>0</span> out of 5</h3>
-
+        <img src="./images/illustration-thank-you.svg" alt="" aria-hidden="true">
+        <h3>You selected <span id="display_rate">0</span> out of 5</h3>
         <h2>Thank you!</h2>
-
         <p>We appreciate you taking the time to give a rating. If you ever need more support,
           don’t hesitate to get in touch!</p>
       </div>
-      <!-- Thank you state end -->
-    </div>
   </main>
   <footer class="footer">
     <p class="attribution">
