@@ -8,6 +8,7 @@ const componentReset = () => {
 	thankYouCard.classList.add("notActive");
 	rates.classList.remove("notActive");
     error.remove();
+	document.getElementById(rate.value).checked = false;
 };
 
 let error = document.createElement("p");
